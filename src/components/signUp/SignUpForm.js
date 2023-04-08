@@ -77,7 +77,7 @@ const SignUpForm = () => {
 
     return (
         <>
-            <div className="signup_conatiner fixed bg-white w-[100%] h-[100vh] overflow-hidden z-30 top-0 left-0">
+            <div className="signup_conatiner fixed bg-white w-[100%] h-[100vh] overflow-scroll md:overflow-hidden z-30 top-0 left-0">
                 <div className=''>
                     <img src={IMG} alt="Loading..." className='w-full h-auto md:w-full md:h-[100vh] object-cover' />
                 </div>
