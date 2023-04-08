@@ -20,7 +20,7 @@ const Form = (props) => {
                 <form className='col-span-1 px-10' onSubmit={props.SubmitForm}>
                     <div className="RestaurantName flex flex-col mt-6 relative">
                         <label htmlFor="Restaurant" className=' text-black font-semibold mx-2'>Enter Your Email <span className='text-red-500'>*</span></label>
-                        <input type="email" name='restaurant_name' value={props.FormValue.email} className={`rounded-md py-2 px-3 bg-transparent 
+                        <input type="email" name='email' value={props.FormValue.email} className={`rounded-md py-2 px-3 bg-transparent 
                     ${props.FormError.email === "border-2 border-red-500" ? props.FormError.email : 'border border-slate-400'}`} onChange={props.handleValidation} />
                     </div>
                     <div className="PhoneNumber flex flex-col my-3 relative">

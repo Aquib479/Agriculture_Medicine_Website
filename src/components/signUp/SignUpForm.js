@@ -6,7 +6,6 @@ import IMG from '../Images/ag1.png'
 
 
 const SignUpForm = () => {
-    var api = process.env.REACT_APP_BASE_URL
 
     let [FormValue, setFormValue] = useState({
         email: '',
@@ -37,7 +36,7 @@ const SignUpForm = () => {
         const errors = {};
 
         // Check all the inputs are correct or not
-        if (!value.email) {
+        if (!value.email.includes('@')) {
             errors.email = 'border-2 border-red-500'
         }
         if (!value.contact) {
@@ -60,6 +59,7 @@ const SignUpForm = () => {
     useEffect(() => {
         if (Object.keys(FormError).length === 0 && submit) {
             delete FormValue.confirm_password;
+            console.log(FormValue);
             // post request for signup form !!
             // add toast to show that user has signed up !!
             toast.success("SignUp Success", {
